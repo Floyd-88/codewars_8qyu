@@ -13,3 +13,19 @@ function pillars(num_pill, dist, width) {
     return distance = 0;
   }   
 }
+
+
+
+/*We need a function that can transform a number into a string.
+What ways of achieving this do you know?*/
+function numberToString(num) {
+  return String(num);
+}
+
+/*Task
+Given an integral number, determine if it's a square number:*/
+
+var isSquare = function(n){
+  return Number.isInteger(Math.sqrt(n));
+  }; // fix me
+console.log(isSquare(16))
