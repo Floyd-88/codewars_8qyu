@@ -37,3 +37,18 @@ function friend(friends){
   let lengthCheck = friends.filter( item => item.length === 4);
   return lengthCheck;
 }
+
+
+/*Complete the square sum function so that it squares each number passed into it and then sums the results together.
+For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.*/
+let numbers = [2, 4, 3];
+function squareSum(numbers){
+let result = 0;
+let sum = numbers.map((i) => {
+	result += Math.pow(i, 2);
+	return result;
+})
+return (numbers.length != 0) ? sum.pop() : 0;
+}
+
+console.log(squareSum(numbers));
