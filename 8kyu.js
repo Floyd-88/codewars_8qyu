@@ -84,3 +84,18 @@ function nbYear(p0, percent, aug, p) {
   return i;
 }
 console.log(nbYear(1500000, 0.25, 1000, 2000000))
+
+
+/*In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?*/
+function makeNegative(num) {
+if(num < 0) {return num} else if (num >= 0) {return num - num * 2}
+}
+
+/*There is an array with some numbers. All numbers are equal except for one. Try to find it!*/
+function findUniq(arr) {
+ let result = arr.filter(function(num, i, arr) {
+ 	return arr.indexOf(num) === arr.lastIndexOf(num);
+ });return +result.join()
+}
+let arr = [ 1];
+console.log(findUniq(arr));
