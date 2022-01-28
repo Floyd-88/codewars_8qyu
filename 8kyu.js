@@ -62,3 +62,10 @@ return (bool === true) ? "Yes" : "No";
 console.log(boolToWord( false ))
 
 
+/*Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.*/
+function invert(array) {
+ let result = array.map( (num) => {return (num > 0 || num < 0) ? (num - num*2) :  -0})
+ return result
+}
+let array = [1,-2,3,0,5];
+console.log(invert(array));
