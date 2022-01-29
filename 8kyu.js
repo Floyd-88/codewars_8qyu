@@ -133,3 +133,27 @@ function findNeedle(haystack) {
 }
 var haystack_3 = [1,2,3,4,5,6,7,8,8,7,5,4,3,4,5,6,67,5,5,3,3,4,2,34,234,23,4,234,324,324,'needle',1,2,3,4,5,5,6,5,4,32,3,45,54];
 console.log(findNeedle(haystack_3))
+
+
+/*Given an array of integers, find the one that appears an odd number of times.
+There will always be only one integer that appears an odd number of times.*/
+
+function findOdd(A) {
+
+let result = [];
+A.forEach(function(a){
+    if (result[a] != undefined)
+        ++result[a];
+    else
+        result[a] = 1;
+});
+for (var key in result){
+    if(result[key] % 2 != 0) {return +key};
+	}
+}
+let A = [ 1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1 ];
+console.log(findOdd(A))
+
+
+
+
