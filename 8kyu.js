@@ -91,6 +91,7 @@ function makeNegative(num) {
 if(num < 0) {return num} else if (num >= 0) {return num - num * 2}
 }
 
+
 /*There is an array with some numbers. All numbers are equal except for one. Try to find it!*/
 function findUniq(arr) {
  let result = arr.filter(function(num, i, arr) {
@@ -99,3 +100,24 @@ function findUniq(arr) {
 }
 let arr = [ 1];
 console.log(findUniq(arr));
+
+
+/*Trolls are attacking your comment section!
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+Note: for this kata y isn't considered a vowel.*/
+
+function disemvowel(str) {
+	let strArr = str.split("");
+	let strArrNew = [];
+	let result = strArr.filter( (s) => {
+		 if(s != "a" && s != "e" && s != "i" && s != "o" && s != "u" &&
+		 	s != "A" && s != "E" && s != "I" && s != "O" && s != "U") {return strArrNew.push(s)}
+		
+		})
+		return strArrNew.join("")
+}
+let str = "hjkajliOyj gfdg aaad"
+
+console.log(disemvowel(str))
